@@ -18,7 +18,7 @@ $ git add .
 $ git commit -m "Initial commit"
 #Create a GitHub repository and connect it with your project:
 
-$ git remote add origin https://github.com/your-username/repository-name.git
+$ git remote add origin https://github.com/berrydzhobs/Gym-Git-Exercise-Solution.git
 Push your changes to GitHub:
 
 $ git push -u origin main
