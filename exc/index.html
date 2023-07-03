@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='app.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='uikit.css'>
+    <script src='app.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="appbar">
+
+            <div id="hmz" class="icon-box uk-background-cover" style="background-image: url('https://c.stocksy.com/a/gy0500/z9/1195402.jpg');">   
+                
+            </div>
+
+            <div class="icon-box uk-background-cover" style="background-image: url('https://qph.cf2.quoracdn.net/main-qimg-0b438efab28ca1e60b2089751e14ee9a-lq');">   
+                
+            </div>
+
+            <div class="icon-box uk-background-cover" style="background-image: url('https://media.vogue.co.uk/photos/5eed1009a2fb5e0449248692/1:1/w_775%2Cc_limit/Roxanne%2520Rajcoomar-Hadden6.jpg');">   
+                
+            </div>
+            <div class="icon-box uk-background-cover" style="background-image: url('https://c.stocksy.com/a/gy0500/z9/1195402.jpg');">   
+                
+            </div>
+            <div class="icon-box uk-background-cover" style="background-image: url('https://media.glamour.com/photos/60352d535d7be6c90b6d5c89/1:1/w_2500,h_2500,c_limit/river%20(8).jpg);">   
+                
+            </div>
+            
+
+            <div class="icon-box uk-background-cover" style="background-image: url('https://thenuherald.com/wp-content/uploads/2022/08/Andrew-Tate.jpg');">   
+                
+            </div>
+
+            <div class="icon-box uk-background-cover" style="background-image: url('https://mediaproxy.salon.com/width/1200/https://media.salon.com/2010/12/mark_zuckerberg_named_time.jpg');">   
+                
+            </div>
+
+            <div class="icon-box uk-background-cover" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKgC_nT8XVkPeAERmWxDAwbJUz_xxnoFUdbw&usqp=CAU');">   
+                
+            </div>
+            
+                
+        </div>
+
+        <div class="content">
+
+
+            <div class="uk-height-viewport  uk-flex uk-flex-center">
+
+
+                <div class="uk-width-2-3 uk-margin-top">
+
+                    <div class="uk-height-small uk-text-center uk-box-shadow-large uk-flex uk-flex-middle rounded" style=" background-color: chartreuse;color: rgb(4, 44, 44);">
+                        <div id="Notification" class="uk-width-2-3 uk-text-bold" style="margin: auto !important;">
+                            Notification Pannel
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="uk-child-width-expand@s uk-grid uk-text-center uk-margin-top" uk-grid>
+                        <div>
+                            <div id="berry" class="uk-card uk-height-small uk-card-default uk-card-body">
+                                Hover on me
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-height-small uk-card-default uk-card-body">
+                                <button id="togglePannel" type="submit" class="uk-button rounded">
+                                    Show magic
+                                </button>
+                                <button id="togglePannelReset" type="submit" class="uk-button rounded" style="display: none;">
+                                    Go Back
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-height-small uk-card-default uk-card-body">John</div>
+                        </div>
+                    </div>
+
+                    <div class="uk-first-column uk-margin-top">
+
+    
+                        <ul class="uk-list uk-list-divider">
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                            <li>List item 4 with some more text wrapping into the next line</li>
+                            <li>List item 6</li>
+                        </ul>
+    
+                    </div>
+
+
+
+
+
+
+                    
+                </div>
+
+            </div>
+
+                
+        </div>
+
+        <div class="pannel">
+
+        </div>
+    </div>
+
+<script>
+let main = document.querySelector(".container")
+let togglePannel = document.getElementById("togglePannel");
+let pannel = document.querySelector(".pannel")
+let pannelReset = document.querySelector("#togglePannelReset")
+
+// Store properties
+const mainBack = {
+    grid : main.style.gridTemplateColumns,
+    color : main.style.color,
+    display : pannel.style.display,
+    toggleDisplay : togglePannel.style.display,
+    pannelReset : pannelReset.style.display
+
+}
+
+
+function togglePannelClick(){
+    main.style.gridTemplateColumns = "0.4fr 5fr 2fr";
+    main.style.color = "red";
+    pannel.style.display = "block";
+    togglePannel.style.display = "none";
+    pannelReset.style.display = "block";
+}
+
+function togglePannelClickBack(){
+    main.style.gridTemplateColumns = mainBack.grid;
+    main.style.color = "red";
+    pannel.style.display = mainBack.pannelReset;
+    togglePannel.style.display = "none";
+    pannelReset.style.display = "block";
+}
+
+togglePannel.addEventListener("click", togglePannelClick)
+pannelReset.addEventListener("click", togglePannelClickBack)
+
+
+
+
+
+
+
+let ul = document.getElementsByTagName("li")[3];
+ul.innerText = "YooThemes"
+console.log(ul)
+
+let getNotification = document.querySelector("#Notification");
+
+   let defaultBerry = document.getElementById("berry");
+   defaultBerry.innerText = "Hover on me and see what happens"
+   defaultBerry.style.backgroundColor = "purple";
+   defaultBerry.style.color = "white";
+   defaultBerry.style.borderRadius = "15px";
+
+   const defaultBerryOriginal = {
+    text : defaultBerry.innerText,
+    backgroundColor : defaultBerry.style.backgroundColor,
+    Color :  defaultBerry.style.color,
+    Roundnes : defaultBerry.style.borderRadius,
+    Notification : getNotification.innerText
+   }
+
+
+   let go  = document.querySelector("div.uk-card");
+
+   function changGo(){
+    go.style.backgroundColor = "#876";
+    go.style.color = "white";
+    go.style.borderRadius = "15px";
+    go.innerText = `
+    Hovering Now
+        `
+    getNotification.innerText = "This is amazing "
+   };
+
+   function changGoBack(){
+    go.style.backgroundColor = defaultBerryOriginal.backgroundColor;
+    go.style.color = defaultBerryOriginal.color;
+    go.style.borderRadius = defaultBerryOriginal.Roundnes;
+    go.innerText = defaultBerryOriginal.text;
+    getNotification.innerText = defaultBerryOriginal.Notification;
+   };
+
+   go.addEventListener("mouseover", changGo)
+   go.addEventListener("mouseout", changGoBack)
+
+   // Get Lists of things
+   let getLists  = document.querySelector(".uk-list-divider");
+    getLists.style.backgroundColor = "purple";
+    getLists.style.color = "white";
+    getLists.style.borderRadius = "12px";
+    getLists.style.padding = "17px";
+
+    const getListsOriginal  = {
+        backgroundImage : getLists.style.backgroundColor,
+        Color : getLists.style.color,
+        Roundnes : getLists.style.borderRadius,
+        Padding: getLists.style.padding
+    }
+
+    function changGetLists(){
+    getNotification.innerText = "Hovering on Purple div box";
+    getLists.style.backgroundColor = "orange";
+    getLists.style.color = "black";
+    getLists.style.borderRadius = "12px";
+    getLists.style.padding = "17px";
+    };
+
+    function changGetListsBack(){
+        getLists.style.backgroundColor = getListsOriginal.backgroundImage;
+        getLists.style.color = getListsOriginal.Color;
+        getLists.style.borderRadius = getListsOriginal.Roundnes;
+        getLists.style.padding = getListsOriginal.padding
+    };
+
+    getLists.addEventListener("mouseenter", changGetLists)
+    getLists.addEventListener("mouseleave", changGetListsBack)
+
+
+
+
+
+
+
+
+
+
+
+
+    let getHmz = document.querySelector("#hmz");
+    //Store orginal elements
+
+    const original = {
+        backgroundImage : getHmz.style.backgroundImage,
+        NotText : getNotification.innerText,
+    }
+
+
+
+    function changNotificationProfile1(event){
+        getNotification.innerText = "Hovering on Maria with change on Profile Picture";
+        getHmz.style.backgroundImage = 'url("https://www.telegraph.co.uk/content/dam/women/2020/06/22/TELEMMGLPICT000233266105_trans_NvBQzQNjv4Bqg8g43alDHGEjwUZmt_Pv6S_V8bgbTbc0Ms9TYjYL2vA.jpeg")';
+    };
+
+    function revertNotBack() {
+        // Restore the original HTML content
+        getNotification.innerText = original.NotText;
+        getHmz.style.backgroundImage = original.backgroundImage;
+    }
+
+    getHmz.addEventListener("mouseenter", changNotificationProfile1);
+    getHmz.addEventListener("mouseleave", revertNotBack);
+    
+
+    
+
+</script>
+
+</body>
+</html>
